@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ListLetters } from "./ListLetter";
 
 export const IntroSection = () => {
   return (
@@ -7,12 +8,14 @@ export const IntroSection = () => {
         className="bg-yellow-600 h-56 w-56"
         whileHover={{ scale: 1.1 }}
       />
-      <motion.div className="text-8xl" whileHover={{ scale: 1.1 }}>
-        Hola,
-      </motion.div>
-      <motion.div className="text-8xl" whileHover={{ scale: 1.1 }}>
-        Soy Pablo,
-      </motion.div>
+
+      <ListLetters word={"Hola,"} />
+
+      <div>
+        <ListLetters word={"Soy Pablo,"} />
+      </div>
+      <ListLetters word={"Soy Pablo,"} />
+
       <motion.div className="text-8xl" whileHover={{ scale: 1.1 }}>
         Web Engineer,
       </motion.div>
