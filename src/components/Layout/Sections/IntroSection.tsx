@@ -1,24 +1,29 @@
+import classNames from "classnames";
 import { motion } from "framer-motion";
-import { ListLetters } from "./ListLetter";
+import { ListLetters } from "../../Lists/ListLetter";
+import { Element, animateScroll } from "react-scroll";
 
 export const IntroSection = () => {
   return (
-    <div className="h-screen bg-gray-800 flex flex-1 flex-col items-center justify-center">
-      <motion.div
-        className="bg-yellow-600 h-56 w-56"
-        whileHover={{ scale: 1.1 }}
-      />
-
-      <ListLetters word={"Hola,"} />
-
-      <div>
-        <ListLetters word={"Soy Pablo,"} />
+    <Element name="Intro">
+      <div className="h-screen bg-gray-800 flex flex-1 flex-col justify-center pl-8 ">
+        <div className={"text-right"}>
+          <ListLetters word={"Hi,"} />
+          <ListLetters word={"I'm Pablo,"} />
+          <ListLetters word={"Software Engineer!"} />
+        </div>
+        <div className="mt-10 ml-5">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className={classNames(
+              "border-soild border-sky-600 border-2 p-4 hover:bg-sky-500"
+            )}
+            onClick={() => animateScroll.scrollToBottom()}
+          >
+            <text>Contact Me</text>
+          </motion.button>
+        </div>
       </div>
-      <ListLetters word={"Soy Pablo,"} />
-
-      <motion.div className="text-8xl" whileHover={{ scale: 1.1 }}>
-        Web Engineer,
-      </motion.div>
-    </div>
+    </Element>
   );
 };

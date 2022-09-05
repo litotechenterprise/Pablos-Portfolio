@@ -1,9 +1,13 @@
+import { Element } from "react-scroll";
+
 export const ProjectSection = () => {
   return (
-    <div className="h-screen bg-rose-500">
-      <div>
-        <p>Projects</p>
+    <Element name="Work">
+      <div className="h-screen bg-rose-500">
+        <div>
+          <p>Work</p>
+        </div>
       </div>
-    </div>
+    </Element>
   );
 };
